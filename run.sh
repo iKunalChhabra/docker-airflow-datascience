@@ -2,7 +2,12 @@
 airflow db init
 
 # Create the user
-airflow users create --username $AIRFLOW_USER --firstname $AIRFLOW_USER_FIRSTNAME --lastname $AIRFLOW_USER_LASTNAME --role Admin --email $AIRFLOW_USER_EMAIL --password $AIRFLOW_PASSWORD
+airflow users create --username $AIRFLOW_USER \
+                     --firstname $AIRFLOW_USER_FIRSTNAME \
+                     --lastname $AIRFLOW_USER_LASTNAME \
+                     --role Admin \
+                     --email $AIRFLOW_USER_EMAIL \
+                     --password $AIRFLOW_PASSWORD
 
 # Start the scheduler
 airflow scheduler -D \
@@ -22,4 +27,10 @@ airflow webserver -D \
     --stdout $AIRFLOW_HOME/logs/webserver/airflow-webserver.stdout &
 
 # Start jupyter lab on port 8888
-jupyter lab --port $JUPYTER_PORT --no-browser --notebook-dir=/airflow/notebooks --allow-root --ip=* --NotebookApp.token='' --NotebookApp.password=''
+jupyter lab --port $JUPYTER_PORT \
+            --no-browser \
+            --notebook-dir=/airflow/notebooks \
+            --allow-root \
+            --ip=* \
+            --NotebookApp.token='' \
+            --NotebookApp.password=''
