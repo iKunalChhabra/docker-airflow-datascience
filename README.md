@@ -4,11 +4,17 @@
 
 ### Steps to run:
 
+#### Docker Compose:
+
 - `git clone https://github.com/iKunalChhabra/docker-airflow-datascience.git`
 - `cd docker-airflow-datascience`
 - `mkdir dags`
 - `docker compose up -d` to run the container
 - `docker compose down` to stop the container
+
+#### Docker command line:
+
+`docker container run -d --rm --name airflow-datascience -p 8080:8080 -p 8888:8888 -v ~/$(pwd):/airflow/dags ikunalchhabra/airflow-datascience:latest`
 
 ### Base Image
 
@@ -25,15 +31,15 @@
 
 ### Environment variables
 
-- `AIRFLOW_HOME [default=/airflow]`
-- `SHELL [default=/bin/bash]`
-- `AIRFLOW_USER [default=admin]`
-- `AIRFLOW_USER_FIRSTNAME [default=admin]`
-- `AIRFLOW_USER_LASTNAME [default=admin]`
-- `AIRFLOW_USER_EMAIL [default=admin@admin.com]`
-- `AIRFLOW_PASSWORD [default=admin]`
-- `AIRFLOW_WEB_PORT [default=8080]`
-- `JUPYTER_PORT [default=8888]`
+- `AIRFLOW_HOME` `[default=/airflow]`
+- `SHELL` `[default=/bin/bash]`
+- `AIRFLOW_USER` `[default=admin]`
+- `AIRFLOW_USER_FIRSTNAME` `[default=admin]`
+- `AIRFLOW_USER_LASTNAME` `[default=admin]`
+- `AIRFLOW_USER_EMAIL` `[default=admin@admin.com]`
+- `AIRFLOW_PASSWORD` `[default=admin]`
+- `AIRFLOW_WEB_PORT` `[default=8080]`
+- `JUPYTER_PORT` `[default=8888]`
 
 Pull requests currently are not accepted.
 Please create an issue if required.
