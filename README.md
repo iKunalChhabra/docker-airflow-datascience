@@ -14,7 +14,7 @@
 
 #### Docker command line:
 
-`docker container run -d --rm --name airflow-datascience -p 8080:8080 -p 8888:8888 -v ~/$(pwd):/airflow/dags ikunalchhabra/airflow-datascience:latest`
+`docker container run -d --rm --name airflow-datascience -p 8080:8080 -p 8888:8888 -v $(pwd)/dags:/airflow/dags ikunalchhabra/airflow-datascience:latest`
 
 ### Base Image
 
