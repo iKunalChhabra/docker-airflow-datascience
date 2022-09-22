@@ -35,6 +35,7 @@
 - `AIRFLOW_WEB_PORT [default=8080]`
 - `JUPYTER_PORT [default=8888]`
 
-Pull requests currently are not accepted. Please create an issue if required.
+Pull requests currently are not accepted.
+Please create an issue if required.
 
 Feel free to reach out to me over email incase of any questions.
