@@ -1,0 +1,8 @@
+services:
+  airflow:
+    image: docker-airflow-datascience:latest
+    ports:
+      - "8080:8080"
+      - "8888:8888"
+    volumes:
+      - ./dags:/airflow/dags
