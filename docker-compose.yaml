@@ -1,6 +1,6 @@
 services:
   airflow:
-    image: ikunalchhabra/docker-airflow-datascience:latest
+    image: ikunalchhabra/airflow-datascience:latest
     ports:
       - "8080:8080"
       - "8888:8888"
