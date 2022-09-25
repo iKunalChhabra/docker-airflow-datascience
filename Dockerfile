@@ -1,5 +1,9 @@
 FROM continuumio/anaconda3
 
+LABEL maintainer="Kunal Chhabra" \
+      version="1.0.0" \
+      description="Docker image with airflow and data science tools"
+
 WORKDIR /airflow
 
 ENV AIRFLOW_HOME /airflow
@@ -23,6 +27,9 @@ EXPOSE ${AIRFLOW_WEB_PORT}
 VOLUME /airflow/dags
 
 COPY run.sh .
+COPY healthcheck.sh .
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=1 CMD bash healthcheck.sh
 
 CMD ["bash", "run.sh"]
 

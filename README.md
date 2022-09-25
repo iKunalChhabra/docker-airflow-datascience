@@ -2,6 +2,8 @@
 
 [Docker image](https://hub.docker.com/r/ikunalchhabra/airflow-datascience) with airflow and data science tools.
 
+This image is for development purpose only, not to be used in production.
+
 ### Steps to run:
 
 #### Docker Compose:
