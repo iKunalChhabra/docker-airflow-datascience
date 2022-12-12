@@ -1,5 +1,6 @@
 FROM continuumio/anaconda3
 
+
 LABEL maintainer="Kunal Chhabra" \
       version="1.0.0" \
       description="Docker image with airflow and data science tools"
@@ -21,7 +22,7 @@ WORKDIR ${AIRFLOW_HOME}
 RUN apt-get update \
     && apt-get install --no-install-recommends -y vim \
     && mkdir notebooks dags logs logs/scheduler logs/webserver \
-    && pip install apache-airflow==2.4.0
+    && pip install apache-airflow==2.5.0
 
 VOLUME ${AIRFLOW_HOME}/dags ${AIRFLOW_HOME}/notebooks
 
